@@ -2,16 +2,11 @@ trigger:
 - main
 
 pool:
-  #name: Default # use this if using self-hosted
-  pool:
-   vmImage: 'windows-latest' # use this if using Microsoft-hosted
+  name: Default # use this if using self-hosted
+  #pool:vmImage: 'windows-latest' # use this if using Microsoft-hosted
 
 steps:
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '8.0.x' # Or your .NET SDK version
-    installationPath: $(Agent.ToolsDirectory)/dotnet
+
 
 - script: dotnet build
   displayName: 'Build project'
