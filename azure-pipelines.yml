@@ -9,7 +9,7 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: '8.x.x' # Or your .NET SDK version
+    version: '8.0.x' # Or your .NET SDK version
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
 - script: dotnet build
