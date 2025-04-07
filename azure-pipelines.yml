@@ -2,8 +2,9 @@ trigger:
 - main
 
 pool:
-  name: Default # use this if using self-hosted
-  # pool: 'windows-latest' # use this if using Microsoft-hosted
+  #name: Default # use this if using self-hosted
+  pool:
+   vmImage: 'windows-latest' # use this if using Microsoft-hosted
 
 steps:
 - task: UseDotNet@2
